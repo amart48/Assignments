@@ -18,14 +18,20 @@ def displayMyInfo():
 
 def factorial(N):
     factorial = math.factorial(N)
+    return factorial
 
-#def maximumNo(a,b,c):
+def maximumNo(N1,N2,N3):
+    if N1 > N2 and N3:
+        return N1
+    elif N2 > N1 and N3:
+        return N2
+    elif N3 > N1 and N2:
+        return N3
 
 #def digits():
 
-
 def main():
-    flag = True
+    flag = True # Set the flag to true to repeat the main function 
     while flag == True:
         print("\n\n\n===============","User Defined Function Menu","="*15)
         print("1. Compute n Factorial")
@@ -39,22 +45,29 @@ def main():
         if user_input == 1:
             print("1. Compute n Factorial")
             N = int(input("Enter a natural number for N: "))
+            factorialResult = factorial(N)
+            print(f"{N} ! = {factorialResult}")
+
 
         elif user_input == 2:
-            print("1. Compute n Factorial")
-            N = int(input("Enter a natural number for N: "))
+            print("2. Find the maximum")
+            N1 = float(input("Please enter the 1st number: "))
+            N2 = float(input("Please enter the 2nd number: "))
+            N3 = float(input("Please enter the 3rd number: "))
+            result = maximumNo(N1,N2,N3)
+            print(f"The greatest number among the three numbers: {int(result)}")
 
         elif user_input == 3:
-            print("1. Compute n Factorial")
+            print("3. Find the number of digits")
             N = int(input("Enter a natural number for N: "))
 
         elif user_input == 4:
-            flag = False
+            flag = False # Sets the flag to false to end the program
             print("Bye!")
 
         else:
             print("Invalid option! Enter a number between 1 to 4")
 
 
-displayMyInfo()
-main()
+displayMyInfo() # Call the displayMyInfo function
+main() # Call the main function
