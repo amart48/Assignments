@@ -36,11 +36,11 @@ def digits(N): # Function to find the amount of numbers in a natural number
     numberResult = 0 # Initalize the numberResult variable to start at 0
     while N > 0: # While variable N is greater than 0, the loop will continue
         N //=10 # Floor division operator to make the number one character shorter. ie: 123/10 = 12.3 = 12 and store in the N variable
-# Everytime the function loops, it will add 1 to the numberResult variable to get a count of how many characters in the N variable
-        numberResult +=1 
+        numberResult +=1 # Everytime the function loops, it will add 1 to the numberResult variable to get a count of how many characters in the N variable
     return numberResult
 
 def main():
+    displayMyInfo() # Call the displayMyInfo function
     flag = True # Set the flag to true to repeat the main function 
     while flag == True:
         print("\n\n\n===============","User Defined Function Menu","="*15)
@@ -79,5 +79,4 @@ def main():
         else:
             print("Invalid option! Enter a number between 1 and 4")
 
-displayMyInfo() # Call the displayMyInfo function
 main() # Call the main function
