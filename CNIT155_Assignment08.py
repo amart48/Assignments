@@ -20,9 +20,9 @@ def displayMyInfo():
 def Discount(lst):
     update = []
 
+    # Loop to find the discounted price of the product
     for price in lst:
         discountedPrice = (price * .07) * 10
-
         update.append(discountedPrice)
     return update
 
@@ -36,11 +36,12 @@ def PrintInfo(lst1, lst2, lst3):
 def Average(lst):
     total = 0
     cnt = 0
-
+     
+     # Loop to find the average price of the items in the list
     for price in lst:
         total += price
         cnt += 1
-    average = (total / cnt) 
+    average = total / cnt
 
     return average
 
@@ -74,7 +75,7 @@ def main():
     print("==================   Averages   ==================")
     print(f"\nThe average of prices before the discount is $ {average_price:.2f}\n\n")
     
-    # Call Discount to change prices
+    # Call Discount to change prices of products
     Updated = Discount(Prices)
     
     # Print message for adjusted prices
