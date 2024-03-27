@@ -26,6 +26,7 @@ def Discount(lst):
         update.append(discountedPrice)
     return update
 
+# This function prints three lists
 def PrintInfo(lst1, lst2, lst3):
     print("\tName\t\t\tID\tPrice")
     print("="*50)
@@ -35,31 +36,30 @@ def PrintInfo(lst1, lst2, lst3):
 
 def Average(lst):
     total = 0
-    cnt = 0
+    count = 0
      
      # Loop to find the average price of the items in the list
     for price in lst:
         total += price
-        cnt += 1
-    average = total / cnt
+        count += 1
+    average = total / count
 
     return average
 
 def Search(lst1, lst2, lst3, Average):
-    # Print column headers
+    # Print headers
     print("============ Products under <= $75.81 ============")
     print("\tName\t\t\tID\tPrice")
     print("="*50)
     
-    # Loop through each item in the lists
+    # Loop to find the products whose price is less than or equal to the average
     for name, ID, price in zip(lst1, lst2, lst3):
-        # Check if the price is less than or equal to the average
         if price <= Average:
             # Print the product information
             print(f"\t{name}\t\t{ID}\t${price:.2f}")
 
 def main():
-    # Define lists for Names, Prices, and IDs
+    # lists for names, prices, and IDs
     Names = ["Paint Brush", "Sander\t", "Hand Drill", "Vac Cleaner", "Roller\t", "Chainsaw"]
     IDs = [3750, 4389, 3986, 9562, 1967, 2988]
     Prices = [12.99, 82.49, 117.89, 178.99, 57.49, 199.99]
