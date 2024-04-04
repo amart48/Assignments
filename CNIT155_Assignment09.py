@@ -21,13 +21,13 @@ def main():
                 # Loop to capitalize first and last name of each line in the input file
                 for line in fileInput:
                     # Strip removes empty space 
-                    # Split the line into seperate words
+                    # Split the line into seperate words 
                     temp = line.strip().split()
-                    # Get the first name capitalize it
+                    # Get the first name and capitalize it
                     firstName = temp[0].title()
                     # Get the last name and capitalize it
                     lastName = temp[1].title()
-                    # Concatenate the first and last name and add to Names
+                    # Concatenate the first and last name and add to Names list
                     Names.append(firstName + " " + lastName)
                     # Adding the score of the student and turn it into a float
                     Scores.append(float(temp[2]))
