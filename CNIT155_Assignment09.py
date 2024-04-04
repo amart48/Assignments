@@ -3,7 +3,7 @@
 # Mart2164@purdue.edu
 # Program Description: A program that will read student names and GPA's from a 
 # text file. The program will perform different analytical tasks. It will 
-# output different file called output.txt.
+# output a different file called output.txt with the results
 # Academic Honesty:
 # I attest that this is my original work.
 # I have not used unauthorized source code, code either modified or unmodified.
