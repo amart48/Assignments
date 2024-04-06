@@ -82,6 +82,6 @@ def main():
     except FileNotFoundError:
         print("The program failed to open the file. Make sure of the followings:")
         print("\t\tThe file to read is located in the same folder where this program is!")
-        print("\t\tThe file's name is splled correctly!")
+        print("\t\tThe file's name is spelled correctly!")
     
 main()
