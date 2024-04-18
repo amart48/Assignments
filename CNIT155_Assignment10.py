@@ -17,6 +17,7 @@ def main():
 
     # Create a window with 600 * 450 dimension.
     Window = GraphWin("Assignment 10", 500, 400)
+    Window.setBackground("grey")
     # Create a title for this program
     title = Text(Point(220,25), "Assignment 10: Using Graphics") 
     title.setSize(20) #set the title's font size to 20 
@@ -47,12 +48,15 @@ def main():
     #Create a button for exit
     quit = Button(Window, Point(410, 100), 50, 30, "Exit") 
     quit.activate() #Activate Exit button
+
     rst1 = Text(Point(200,110), "") 
     rst1.setSize(15) 
     rst1.draw(Window)
+
     rst2 = Text(Point(200, 130), "") 
     rst2.setSize(15) 
     rst2.draw(Window)
+    
     rst3 = Text(Point(210, 150), "") 
     rst3.setSize(15)
     rst3.draw(Window)
@@ -66,18 +70,18 @@ def main():
             string = inputBox.getText()
             
             #Find how many a or As are in the entered string.
-            count_a = string.lower().count('a')
+            countA = string.lower().count('a')
             
             #Make first letter of each word uppercase using .title() 
-            title_case_string = string.title()
+            titleCaseString = string.title()
             
             #Find how many words in the entered string using .split() 
-            word_count = len(string.split())
+            wordCount = len(string.split())
 
             #Print the results as Desired Outputs in the display textbox
-            rst1.setText(f"The title is... :  {title_case_string}")
-            rst2.setText(f"There is/are {count_a} A/a(s).")
-            rst3.setText(f"The number of words in the string is/are: {word_count}" )
+            rst1.setText(f"The title is... :  {titleCaseString}")
+            rst2.setText(f"There is/are {countA} A/a(s).")
+            rst3.setText(f"The number of words in the string is/are: {wordCount}" )
 
         elif quit.clicked(p): #When the Exit button is clicked, it closes the window.  
             return
