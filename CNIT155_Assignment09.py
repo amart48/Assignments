@@ -78,7 +78,7 @@ def main():
         fileInput.close()
         fileOutput.close()
 
-    # Throw an error code instead of ending the program            
+    # Throw an error code if the program cannot read the input file            
     except FileNotFoundError:
         print("The program failed to open the file. Make sure of the followings:")
         print("\t\tThe file to read is located in the same folder where this program is!")
